@@ -48,10 +48,17 @@ this to:
 (You might notice that the command `mocha` by itself may fail,
 but this is OK. `npm` will take care of it; run `npm test` to confirm.)
 
+Furthermore, Node.js version needs to be changed from the default `0.10` to a more recent version.
+
+```yaml
+language: node_js
+node_js: node
+```
+
 Commit this change, and push to GitHub.
 
 ```sh-session
-$ git add package.json
+$ git add package.json .travis.yml
 $ git commit -m "Run `mocha` in `script`"
 $ git push origin
 ```
